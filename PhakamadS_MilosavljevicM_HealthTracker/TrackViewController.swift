@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  PhakamadS_MilosavljevicM_HealthTracker
 //
 //  Created by Marko Milosavljevic on 3/2/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class TrackViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

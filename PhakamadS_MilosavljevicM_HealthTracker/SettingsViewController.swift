@@ -51,6 +51,8 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBOutlet var textFields: [UITextField]!
     @IBOutlet weak var genderOutlet: UISegmentedControl!
     @IBOutlet weak var inchesOutlet: UITextField!
+    @IBOutlet weak var feetOutlet: UITextField!
+    
     @IBOutlet weak var weightOutlet: UITextField!
     @IBOutlet weak var goalWeightOutlet: UITextField!
     @IBOutlet weak var bmiResult: UILabel!
@@ -155,7 +157,11 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBAction func calculateBmi(_ sender: UIButton) {
         var result: Double = Double(bmiResult.text!)!
         let weight: Double = Double(weightOutlet.text!)!
-        let height: Double = Double(inchesOutlet.text!)!
+        let feet: Double = Double(feetOutlet.text!)!
+        var height: Double = Double(inchesOutlet.text!)!
+        
+        height = (feet * 12) + height
+        print("This is height with feet and inches: \(height)")
         
         result = 703 * (weight / (height * height))
         bmiResult.text! = String(format: "%.1f", result)

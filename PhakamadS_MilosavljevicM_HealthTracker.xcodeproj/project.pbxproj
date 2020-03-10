@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD1889702416042300896A8D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18896F2416042300896A8D /* SettingsViewController.swift */; };
 		AD6115CE240DAB5200B1945F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6115CD240DAB5200B1945F /* AppDelegate.swift */; };
 		AD6115D0240DAB5200B1945F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6115CF240DAB5200B1945F /* SceneDelegate.swift */; };
 		AD6115D2240DAB5200B1945F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6115D1240DAB5200B1945F /* HomeViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD18896F2416042300896A8D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AD6115CA240DAB5200B1945F /* PhakamadS_MilosavljevicM_HealthTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhakamadS_MilosavljevicM_HealthTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6115CD240DAB5200B1945F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6115CF240DAB5200B1945F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				AD6115FF240DAE2100B1945F /* ProgressViewController.swift */,
 				AD611601240DAE7900B1945F /* FeelingsViewController.swift */,
 				AD611603240DAEC500B1945F /* TipsViewController.swift */,
+				AD18896F2416042300896A8D /* SettingsViewController.swift */,
 				AD6115D5240DAB5200B1945F /* Main.storyboard */,
 				AD6115D8240DAB5800B1945F /* Assets.xcassets */,
 				AD6115DA240DAB5800B1945F /* LaunchScreen.storyboard */,
@@ -278,6 +281,7 @@
 				AD6115D2240DAB5200B1945F /* HomeViewController.swift in Sources */,
 				AD6115CE240DAB5200B1945F /* AppDelegate.swift in Sources */,
 				AD6115D0240DAB5200B1945F /* SceneDelegate.swift in Sources */,
+				AD1889702416042300896A8D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -783,11 +783,11 @@
         <image name="settings" width="58" height="59"/>
         <image name="square.and.pencil" catalog="system" width="64" height="58"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
-<<<<<<< HEAD
+
         <image name="waterBottle" width="1024" height="1024"/>
-=======
+
         <image name="user" width="203" height="204"/>
->>>>>>> 22226dd43f7a7d519c81a30a71ceba943c85f219
+
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LiN-zv-cnE"/>

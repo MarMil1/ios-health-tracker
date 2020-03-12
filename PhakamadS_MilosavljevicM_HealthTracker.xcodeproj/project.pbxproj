@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560C8CD72418155B00ADDE53 /* WaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560C8CD62418155B00ADDE53 /* WaterViewController.swift */; };
+		561365882418A5A80036436D /* TrackHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561365872418A5A80036436D /* TrackHeaderView.swift */; };
+		5613658A2418AB7C0036436D /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561365892418AB7C0036436D /* ExerciseViewController.swift */; };
+		56EA5A282415F9ED00BE1112 /* TrackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EA5A272415F9ED00BE1112 /* TrackTableViewController.swift */; };
+		56EA5A2C24172BEA00BE1112 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EA5A2B24172BEA00BE1112 /* MealViewController.swift */; };
+		56EA5A36241764FC00BE1112 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EA5A35241764FC00BE1112 /* Track.swift */; };
 		AD1889702416042300896A8D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18896F2416042300896A8D /* SettingsViewController.swift */; };
 		AD6115CE240DAB5200B1945F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6115CD240DAB5200B1945F /* AppDelegate.swift */; };
 		AD6115D0240DAB5200B1945F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6115CF240DAB5200B1945F /* SceneDelegate.swift */; };
 		AD6115D2240DAB5200B1945F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6115D1240DAB5200B1945F /* HomeViewController.swift */; };
-		AD6115D4240DAB5200B1945F /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6115D3240DAB5200B1945F /* TrackViewController.swift */; };
 		AD6115D7240DAB5200B1945F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6115D5240DAB5200B1945F /* Main.storyboard */; };
 		AD6115D9240DAB5800B1945F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6115D8240DAB5800B1945F /* Assets.xcassets */; };
 		AD6115DC240DAB5800B1945F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6115DA240DAB5800B1945F /* LaunchScreen.storyboard */; };
@@ -40,12 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		560C8CD62418155B00ADDE53 /* WaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterViewController.swift; sourceTree = "<group>"; };
+		561365872418A5A80036436D /* TrackHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHeaderView.swift; sourceTree = "<group>"; };
+		561365892418AB7C0036436D /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		56EA5A272415F9ED00BE1112 /* TrackTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewController.swift; sourceTree = "<group>"; };
+		56EA5A2B24172BEA00BE1112 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
+		56EA5A35241764FC00BE1112 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		AD18896F2416042300896A8D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AD6115CA240DAB5200B1945F /* PhakamadS_MilosavljevicM_HealthTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhakamadS_MilosavljevicM_HealthTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6115CD240DAB5200B1945F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6115CF240DAB5200B1945F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AD6115D1240DAB5200B1945F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		AD6115D3240DAB5200B1945F /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
 		AD6115D6240DAB5200B1945F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD6115D8240DAB5800B1945F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD6115DB240DAB5800B1945F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,10 +122,15 @@
 				AD6115CD240DAB5200B1945F /* AppDelegate.swift */,
 				AD6115CF240DAB5200B1945F /* SceneDelegate.swift */,
 				AD6115D1240DAB5200B1945F /* HomeViewController.swift */,
-				AD6115D3240DAB5200B1945F /* TrackViewController.swift */,
 				AD6115FF240DAE2100B1945F /* ProgressViewController.swift */,
 				AD611601240DAE7900B1945F /* FeelingsViewController.swift */,
 				AD611603240DAEC500B1945F /* TipsViewController.swift */,
+				56EA5A272415F9ED00BE1112 /* TrackTableViewController.swift */,
+				561365872418A5A80036436D /* TrackHeaderView.swift */,
+				56EA5A35241764FC00BE1112 /* Track.swift */,
+				56EA5A2B24172BEA00BE1112 /* MealViewController.swift */,
+				560C8CD62418155B00ADDE53 /* WaterViewController.swift */,
+				561365892418AB7C0036436D /* ExerciseViewController.swift */,
 				AD18896F2416042300896A8D /* SettingsViewController.swift */,
 				AD6115D5240DAB5200B1945F /* Main.storyboard */,
 				AD6115D8240DAB5800B1945F /* Assets.xcassets */,
@@ -275,11 +290,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD611600240DAE2100B1945F /* ProgressViewController.swift in Sources */,
+				561365882418A5A80036436D /* TrackHeaderView.swift in Sources */,
+				56EA5A36241764FC00BE1112 /* Track.swift in Sources */,
 				AD611602240DAE7900B1945F /* FeelingsViewController.swift in Sources */,
 				AD611604240DAEC500B1945F /* TipsViewController.swift in Sources */,
-				AD6115D4240DAB5200B1945F /* TrackViewController.swift in Sources */,
 				AD6115D2240DAB5200B1945F /* HomeViewController.swift in Sources */,
+				560C8CD72418155B00ADDE53 /* WaterViewController.swift in Sources */,
+				56EA5A282415F9ED00BE1112 /* TrackTableViewController.swift in Sources */,
+				56EA5A2C24172BEA00BE1112 /* MealViewController.swift in Sources */,
 				AD6115CE240DAB5200B1945F /* AppDelegate.swift in Sources */,
+				5613658A2418AB7C0036436D /* ExerciseViewController.swift in Sources */,
 				AD6115D0240DAB5200B1945F /* SceneDelegate.swift in Sources */,
 				AD1889702416042300896A8D /* SettingsViewController.swift in Sources */,
 			);

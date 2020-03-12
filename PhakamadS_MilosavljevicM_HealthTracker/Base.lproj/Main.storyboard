@@ -137,6 +137,15 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="ageOutlet" destination="BdB-K2-IKU" id="eVl-9s-OuL"/>
+                        <outlet property="bmiOutlet" destination="fh5-oW-lgi" id="obV-pX-Vlk"/>
+                        <outlet property="genderOutlet" destination="M3z-Yq-iY2" id="7aV-Mb-ECJ"/>
+                        <outlet property="goalWeightOutlet" destination="HBf-mP-CjT" id="Pni-ae-sgu"/>
+                        <outlet property="heightOutlet" destination="fnG-dZ-enA" id="JEx-86-Gjv"/>
+                        <outlet property="nameOutlet" destination="y63-q2-GC7" id="gLC-HH-o2j"/>
+                        <outlet property="weightOutlet" destination="Gaa-aU-dql" id="Mz5-GC-jee"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

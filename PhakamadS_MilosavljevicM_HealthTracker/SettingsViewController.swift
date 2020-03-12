@@ -33,6 +33,8 @@ let ages = ["1", "2", "3", "4", "5",
 
 class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -47,6 +49,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     }
     
     
+    var user: User?
     
     @IBOutlet var textFields: [UITextField]!
     @IBOutlet weak var genderOutlet: UISegmentedControl!
@@ -61,6 +64,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
         override func viewDidLoad() {        super.viewDidLoad()
         // Do any additional setup after loading the view.
+            
     }
     
     
@@ -84,10 +88,22 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     }
     
     @IBAction func nameInput(_ sender: UITextField) {
+        print(sender.text!)
+        user?.name = sender.text!
     }
     
     
     @IBAction func genderAction(_ sender: UISegmentedControl) {
+        print(sender.selectedSegmentIndex)
+        switch sender.selectedSegmentIndex {
+        case 0:
+            user?.gender = .male
+        case 1:
+            user?.gender = .female
+            print(user?.gender.rawValue as Any)
+        default:
+            break
+        }
     }
     
 //    @IBAction func feetInput(_ sender: UITextField) {
@@ -165,6 +181,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         
         result = 703 * (weight / (height * height))
         bmiResult.text! = String(format: "%.1f", result)
+        
         
     }
     

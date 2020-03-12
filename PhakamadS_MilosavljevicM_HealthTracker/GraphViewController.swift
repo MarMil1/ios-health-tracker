@@ -1,30 +1,25 @@
 //
-//  ProgressViewController.swift
+//  GraphViewController.swift
 //  PhakamadS_MilosavljevicM_HealthTracker
 //
-//  Created by Marko Milosavljevic on 3/2/20.
+//  Created by Marko Milosavljevic on 3/12/20.
 //  Copyright © 2020 Marko Milosavljevic. All rights reserved.
 //
 
 import UIKit
 
-class ProgressViewController: UIViewController {
+class GraphViewController: UIViewController {
 
-    var timer: Timer?
-    
-    @IBOutlet weak var dateLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        dateLabel.text = "Today is \(DateFormatter.localizedString(from: Date(), dateStyle: .long, timeStyle: .none))"
+
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func backToProgressButton(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
-    
-
-    
-
     /*
     // MARK: - Navigation
 

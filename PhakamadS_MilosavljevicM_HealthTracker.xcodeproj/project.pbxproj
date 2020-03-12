@@ -15,6 +15,7 @@
 		56EA5A36241764FC00BE1112 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EA5A35241764FC00BE1112 /* Track.swift */; };
 		AD1889702416042300896A8D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18896F2416042300896A8D /* SettingsViewController.swift */; };
 		AD24392A24189DDC006C7559 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24392924189DDC006C7559 /* User.swift */; };
+		AD5A1918241A03920067947B /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5A1917241A03920067947B /* GraphViewController.swift */; };
 		AD6115CE240DAB5200B1945F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6115CD240DAB5200B1945F /* AppDelegate.swift */; };
 		AD6115D0240DAB5200B1945F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6115CF240DAB5200B1945F /* SceneDelegate.swift */; };
 		AD6115D2240DAB5200B1945F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6115D1240DAB5200B1945F /* HomeViewController.swift */; };
@@ -54,6 +55,7 @@
 		56EA5A35241764FC00BE1112 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		AD18896F2416042300896A8D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AD24392924189DDC006C7559 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AD5A1917241A03920067947B /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		AD6115CA240DAB5200B1945F /* PhakamadS_MilosavljevicM_HealthTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhakamadS_MilosavljevicM_HealthTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6115CD240DAB5200B1945F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6115CF240DAB5200B1945F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				AD6115CF240DAB5200B1945F /* SceneDelegate.swift */,
 				AD6115D1240DAB5200B1945F /* HomeViewController.swift */,
 				AD6115FF240DAE2100B1945F /* ProgressViewController.swift */,
+				AD5A1917241A03920067947B /* GraphViewController.swift */,
 				AD611601240DAE7900B1945F /* FeelingsViewController.swift */,
 				AD611603240DAEC500B1945F /* TipsViewController.swift */,
 				56EA5A272415F9ED00BE1112 /* TrackTableViewController.swift */,
@@ -298,6 +301,7 @@
 				AD611602240DAE7900B1945F /* FeelingsViewController.swift in Sources */,
 				AD611604240DAEC500B1945F /* TipsViewController.swift in Sources */,
 				AD6115D2240DAB5200B1945F /* HomeViewController.swift in Sources */,
+				AD5A1918241A03920067947B /* GraphViewController.swift in Sources */,
 				AD24392A24189DDC006C7559 /* User.swift in Sources */,
 				560C8CD72418155B00ADDE53 /* WaterViewController.swift in Sources */,
 				56EA5A282415F9ED00BE1112 /* TrackTableViewController.swift in Sources */,

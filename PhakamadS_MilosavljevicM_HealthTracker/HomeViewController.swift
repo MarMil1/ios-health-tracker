@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
 
     var user: User?
     
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var nameOutlet: UILabel!
     @IBOutlet weak var genderOutlet: UILabel!
     @IBOutlet weak var ageOutlet: UILabel!
@@ -25,7 +26,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 //        nameOutlet.text! = user?.name ?? "John Smith"
-//        genderOutlet.text! = (user?.gender).map { $0.rawValue }  ?? "Male"
+
+        dateLabel.text = "Today is \(DateFormatter.localizedString(from: Date(), dateStyle: .long, timeStyle: .none))"
         
         if let userInfo = user {
             displayUserInfo(userInfo: userInfo)

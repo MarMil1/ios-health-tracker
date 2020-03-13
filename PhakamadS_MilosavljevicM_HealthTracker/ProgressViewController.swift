@@ -9,14 +9,9 @@
 import UIKit
 
 class ProgressViewController: UIViewController {
-
-    var timer: Timer?
-    
-    @IBOutlet weak var dateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dateLabel.text = "Today is \(DateFormatter.localizedString(from: Date(), dateStyle: .long, timeStyle: .none))"
         // Do any additional setup after loading the view.
     }
     

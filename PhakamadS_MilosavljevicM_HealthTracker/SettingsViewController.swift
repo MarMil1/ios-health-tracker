@@ -106,20 +106,6 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         }
     }
     
-//    @IBAction func feetInput(_ sender: UITextField) {
-//        let feet = feetAndInchesOutlet[0].text!
-//
-//        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-//
-//        if (Int(feet) == nil) {
-//        let alert = UIAlertController(title: "Wrong input",
-//        message: "Feet must be a number.",
-//        preferredStyle: .alert)
-//        alert.addAction(cancelAction)
-//        present(alert, animated: true, completion: nil)
-//        }
-//    }
-    
     @IBAction func inchesInput(_ sender: UITextField) {
         let inches = inchesOutlet.text!
 

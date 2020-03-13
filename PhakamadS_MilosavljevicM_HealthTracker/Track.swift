@@ -36,6 +36,7 @@ class Meal {
         self.amount = amount
         self.calories = calories
     }
+    
 }
 
 class Water {

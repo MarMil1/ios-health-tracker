@@ -16,6 +16,17 @@ let trackTopics = [
     "Exersice"
 ]
 
+let meal1 = Meal(food: "oatmeal", mealType: .breakfast, amount: 1, calories: 300)
+let meal2 = Meal(food: "banana", mealType: .breakfast, amount: 1, calories: 200)
+let meal3 = Meal(food: "Coffee", mealType: .breakfast, amount: 1, calories: 180)
+let meal4 = Meal(food: "chicken sandwich", mealType: .lunch, amount: 1, calories: 520)
+let meal5 = Meal(food: "Steak", mealType: .dinner, amount: 1, calories: 400)
+let meal6 = Meal(food: "tuna salad", mealType: .dinner, amount: 1, calories: 400)
+
+var breakfastMeals : [Meal]? = [ meal1, meal2, meal3 ]
+var lunchMeals : [Meal]? = [ meal4 ]
+var dinnerMeals : [Meal]? = [ meal5, meal6]
+
 class TrackTableViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -40,14 +51,14 @@ class TrackTableViewController: UITableViewController {
         return topics.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let trackTopic = trackTopics[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: trackTopic.lowercased(), for: indexPath)
-
-        // Configure the cell...
-        cell.textLabel?.text = trackTopics[indexPath.row]
-        return cell
-    }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let trackTopic = trackTopics[indexPath.row]
+//        let cell = tableView.dequeueReusableCell(withIdentifier: trackTopic.lowercased(), for: indexPath)
+//
+//        // Configure the cell...
+//        cell.textLabel?.text = trackTopics[indexPath.row]
+//        return cell
+//    }
     
 
     /*
@@ -95,21 +106,23 @@ class TrackTableViewController: UITableViewController {
         var sentTopic: [String : String ] = [:]
         
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            print(indexPath.row)
-            
+  
             if let mealViewController = segue.destination as? MealViewController {
                 
                 if indexPath.row == 0 {
                     sentTopic["Breakfast"] = topics[indexPath.row]
                     mealViewController.receivedTopic = sentTopic
+                    mealViewController.receivedMeals = breakfastMeals
                     
                 } else if indexPath.row == 1 {
                     sentTopic["Lunch"] = topics[indexPath.row]
                     mealViewController.receivedTopic = sentTopic
+                    mealViewController.receivedMeals = lunchMeals
                     
                 } else if indexPath.row == 2 {
                     sentTopic["Dinner"] = topics[indexPath.row]
                     mealViewController.receivedTopic = sentTopic
+                    mealViewController.receivedMeals = dinnerMeals
                     
                 }
             } else if let waterViewController = segue.destination as? WaterViewController {

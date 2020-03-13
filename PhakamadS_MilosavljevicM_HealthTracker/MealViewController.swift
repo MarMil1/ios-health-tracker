@@ -26,18 +26,47 @@ class MealViewController: UIViewController, UITableViewDataSource, UITableViewDe
         mealTableView.rowHeight = UITableView.automaticDimension
         mealTableView.estimatedRowHeight = UITableView.automaticDimension
         
+        mealTableView.tableFooterView = UIView(frame: .zero)
+        mealTableView.backgroundColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1.0)
+        
           // Do any additional setup after loading the view.
     }
     
     @IBAction func addMeal(_ sender: UIButton) {
         let alert = UIAlertController(title: "Add New Meal", message: nil, preferredStyle: .alert)
-        alert.addTextField { (newMeal) in
-            newMeal.placeholder = "Enter meal"
+        
+        // food
+        alert.addTextField { (text) in
+            text.placeholder = "Enter food -> ex. waffles"
+            text.font = UIFont(name: "Kohinoor Bangla", size: 14)
+        }
+        
+        // quantity
+        alert.addTextField{(text) in
+            text.placeholder = "Enter quantity -> ex. 2 "
+            text.keyboardType = .numberPad
+            text.font = UIFont(name: "Kohinoor Bangla", size: 14)
+        }
+        
+        // calories
+        alert.addTextField{(text) in
+            text.placeholder = "Enter calroies -> ex. 640"
+            text.keyboardType = .numberPad
+            text.font = UIFont(name: "Kohinoor Bangla", size: 14)
         }
 
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) -> Void in print("cancel")})
 
-        let add = UIAlertAction(title: "Add", style: .destructive, handler: { (action) -> Void in print("add")})
+        let add = UIAlertAction(title: "Add", style: .destructive) { (_) -> Void in
+            let food = alert.textFields![0].text!
+            let amount = Int(alert.textFields![1].text!)!
+            let calories = Int(alert.textFields![2].text!)!
+            let mealType = self.getMealType()
+            let newMeal = Meal(food: food, mealType: mealType, amount: amount, calories: calories)
+            self.addToCell(newMeal)
+            self.updateMainMealsList()
+            
+        }
 
         let actions: [UIAlertAction] = [cancel, add]
         for action in actions {
@@ -46,6 +75,16 @@ class MealViewController: UIViewController, UITableViewDataSource, UITableViewDe
         present(alert, animated: true, completion: nil)
         
     }
+    
+    func addToCell(_ newMeal: Meal) -> Void {
+        let index = 0
+        self.receivedMeals?.insert(newMeal, at: index)
+
+        let indexPath = IndexPath(row: index, section: 0)
+        self.mealTableView.insertRows(at: [indexPath], with: .left
+        )
+    }
+        
     
     
     // number of rows in table view
@@ -66,35 +105,16 @@ class MealViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.layer.borderColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1.0).cgColor
         cell.layer.borderWidth = 6
         cell.clipsToBounds = true
-        mealTableView.tableFooterView = UIView(frame: .zero)
-        mealTableView.backgroundColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1.0)
-        cell.layer.borderWidth = 6
-
         return cell
     }
     
     // delete table cell swipe to the left
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
-            //YOUR_CODE_HERE
             self.receivedMeals?.remove(at: indexPath.row)
-            
-            switch self.topicTitle.text {
-                case "Breakfast" :
-                    breakfastMeals = self.receivedMeals!
-                case "Lunch" :
-                    lunchMeals = self.receivedMeals!
-                case "Dinner" :
-                    dinnerMeals = self.receivedMeals!
-                case .none:
-                    print("none")
-                case .some(_):
-                    print("some")
-            }
-
+            self.updateMainMealsList()
             self.mealTableView.deleteRows(at: [indexPath], with: .fade)
             print("----- DONE: removed CELL")
-
         }
         deleteAction.backgroundColor = .red
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
@@ -102,16 +122,45 @@ class MealViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return configuration
     }
     
+    // update main meals list in mealViewController
+    func updateMainMealsList() -> Void {
+        switch self.topicTitle.text {
+            case "Breakfast" :
+                breakfastMeals = self.receivedMeals!
+            case "Lunch" :
+                lunchMeals = self.receivedMeals!
+            case "Dinner" :
+                dinnerMeals = self.receivedMeals!
+            case .none:
+                print("none")
+            case .some(_):
+                print("some")
+        }
+    }
     
-//     UITableViewAutomaticDimension calculates height of label contents/text
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//    }
+    // update main meals list in mealViewController
+    func getMealType() -> Meal.MealType {
+        var type = Meal.MealType(rawValue: "Breakfast")
+        
+        switch self.topicTitle.text {
+            case "Breakfast" :
+                type = Meal.MealType(rawValue: "Breakfast")
+            case "Lunch" :
+                type = Meal.MealType(rawValue: "Lunch")
+            case "Dinner" :
+               type = Meal.MealType(rawValue: "Dinner")
+            default:
+                print("default")
+        }
+        
+        return type!
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         if let topic = receivedTopic {
             for (name, detail) in topic {
-                print(name)
+                // print(name)
                 topicTitle.text = name
                 topicDetail.text = detail
             }

@@ -10,6 +10,7 @@
 		560C8CD72418155B00ADDE53 /* WaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560C8CD62418155B00ADDE53 /* WaterViewController.swift */; };
 		561365882418A5A80036436D /* TrackHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561365872418A5A80036436D /* TrackHeaderView.swift */; };
 		5613658A2418AB7C0036436D /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561365892418AB7C0036436D /* ExerciseViewController.swift */; };
+		56B8F57C241AA5C4003E620D /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8F57B241AA5C4003E620D /* MealTableViewCell.swift */; };
 		56EA5A282415F9ED00BE1112 /* TrackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EA5A272415F9ED00BE1112 /* TrackTableViewController.swift */; };
 		56EA5A2C24172BEA00BE1112 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EA5A2B24172BEA00BE1112 /* MealViewController.swift */; };
 		56EA5A36241764FC00BE1112 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EA5A35241764FC00BE1112 /* Track.swift */; };
@@ -48,6 +49,7 @@
 		560C8CD62418155B00ADDE53 /* WaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterViewController.swift; sourceTree = "<group>"; };
 		561365872418A5A80036436D /* TrackHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHeaderView.swift; sourceTree = "<group>"; };
 		561365892418AB7C0036436D /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		56B8F57B241AA5C4003E620D /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		56EA5A272415F9ED00BE1112 /* TrackTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewController.swift; sourceTree = "<group>"; };
 		56EA5A2B24172BEA00BE1112 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		56EA5A35241764FC00BE1112 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				561365872418A5A80036436D /* TrackHeaderView.swift */,
 				56EA5A35241764FC00BE1112 /* Track.swift */,
 				56EA5A2B24172BEA00BE1112 /* MealViewController.swift */,
+				56B8F57B241AA5C4003E620D /* MealTableViewCell.swift */,
 				560C8CD62418155B00ADDE53 /* WaterViewController.swift */,
 				561365892418AB7C0036436D /* ExerciseViewController.swift */,
 				AD18896F2416042300896A8D /* SettingsViewController.swift */,
@@ -291,6 +294,7 @@
 			files = (
 				AD611600240DAE2100B1945F /* ProgressViewController.swift in Sources */,
 				561365882418A5A80036436D /* TrackHeaderView.swift in Sources */,
+				56B8F57C241AA5C4003E620D /* MealTableViewCell.swift in Sources */,
 				56EA5A36241764FC00BE1112 /* Track.swift in Sources */,
 				AD611602240DAE7900B1945F /* FeelingsViewController.swift in Sources */,
 				AD611604240DAEC500B1945F /* TipsViewController.swift in Sources */,

@@ -33,24 +33,24 @@ class MealViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func addMeal(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Add New Meal", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Add New Meal", message: "Insert food, quantity & calories ", preferredStyle: .alert)
         
         // food
         alert.addTextField { (text) in
-            text.placeholder = "Enter food -> ex. waffles"
+            text.placeholder = "Food -> ex. waffles"
             text.font = UIFont(name: "Kohinoor Bangla", size: 14)
         }
         
         // quantity
         alert.addTextField{(text) in
-            text.placeholder = "Enter quantity -> ex. 2 "
+            text.placeholder = "Quantity -> ex. 2 "
             text.keyboardType = .numberPad
             text.font = UIFont(name: "Kohinoor Bangla", size: 14)
         }
         
         // calories
         alert.addTextField{(text) in
-            text.placeholder = "Enter calroies -> ex. 640"
+            text.placeholder = "Calroies -> ex. 640"
             text.keyboardType = .numberPad
             text.font = UIFont(name: "Kohinoor Bangla", size: 14)
         }
@@ -117,6 +117,8 @@ class MealViewController: UIViewController, UITableViewDataSource, UITableViewDe
             print("----- DONE: removed CELL")
         }
         deleteAction.backgroundColor = .red
+        deleteAction.image = UIImage(named: "trash.png")
+        
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
         configuration.performsFirstActionWithFullSwipe = false
         return configuration

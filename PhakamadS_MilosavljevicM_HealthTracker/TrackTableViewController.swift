@@ -23,7 +23,8 @@ let meal4 = Meal(food: "chicken sandwich", mealType: .lunch, amount: 1, calories
 let meal5 = Meal(food: "Steak", mealType: .dinner, amount: 1, calories: 400)
 let meal6 = Meal(food: "tuna salad", mealType: .dinner, amount: 1, calories: 400)
 
-var breakfastMeals : [Meal]? = [ meal1, meal2, meal3 ]
+ var breakfastMeals : [Meal]? = [ meal1, meal2, meal3 ]
+//var breakfastMeals : [Meal]? = [ ]
 var lunchMeals : [Meal]? = [ meal4 ]
 var dinnerMeals : [Meal]? = [ meal5, meal6]
 

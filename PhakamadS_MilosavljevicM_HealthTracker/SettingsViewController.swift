@@ -59,6 +59,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBOutlet weak var weightOutlet: UITextField!
     @IBOutlet weak var goalWeightOutlet: UITextField!
     @IBOutlet weak var bmiResult: UILabel!
+    @IBOutlet weak var bmiCategoryOutlet: UILabel!
     
     
     
@@ -157,18 +158,41 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     }
     
     @IBAction func calculateBmi(_ sender: UIButton) {
-        var result: Double = Double(bmiResult.text!)!
-        let weight: Double = Double(weightOutlet.text!)!
-        let feet: Double = Double(feetOutlet.text!)!
-        var height: Double = Double(inchesOutlet.text!)!
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         
-        height = (feet * 12) + height
-        print("This is height with feet and inches: \(height)")
+        if (weightOutlet.text == "" || feetOutlet.text == "" || inchesOutlet.text == "") {
+            let alert = UIAlertController(title: "Warning",
+            message: "Must enter height and weight.",
+            preferredStyle: .alert)
+            alert.addAction(cancelAction)
+            present(alert, animated: true, completion: nil)
+        } else {
+            var result: Double = Double(bmiResult.text!)!
+            let weight: Double = Double(weightOutlet.text!)!
+            let feet: Double = Double(feetOutlet.text!)!
+            var height: Double = Double(inchesOutlet.text!)!
+            
+            // feet to inches formula
+            height = (feet * 12) + height
+            
+            // BMI formula with one decimal
+            result = 703 * (weight / (height * height))
+            bmiResult.text! = String(format: "%.1f", result)
+        }
         
-        result = 703 * (weight / (height * height))
-        bmiResult.text! = String(format: "%.1f", result)
-        
-        
+        if (Double(bmiResult.text!)! <= 18.5 ) {
+            bmiCategoryOutlet.text = "UNDERWEIGHT"
+            bmiCategoryOutlet.textColor = UIColor.red
+        } else if (Double(bmiResult.text!)! >= 18.5 && Double(bmiResult.text!)! <= 24.9) {
+            bmiCategoryOutlet.text = "NORMAL"
+            bmiCategoryOutlet.textColor = UIColor.blue
+        } else if (Double(bmiResult.text!)! >= 25 && Double(bmiResult.text!)! <= 29.9) {
+            bmiCategoryOutlet.text = "OVERWEIGHT"
+            bmiCategoryOutlet.textColor = UIColor.red
+        } else if (Double(bmiResult.text!)! >= 30) {
+            bmiCategoryOutlet.text = "OBESE"
+            bmiCategoryOutlet.textColor = UIColor.red
+        }
     }
     
     

@@ -180,7 +180,9 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
             bmiResult.text! = String(format: "%.1f", result)
         }
         
-        if (Double(bmiResult.text!)! <= 18.5 ) {
+        if (Double(bmiResult.text!)! == 0) {
+            bmiCategoryOutlet.text = "BMI category"
+        } else if (Double(bmiResult.text!)! <= 18.5 ) {
             bmiCategoryOutlet.text = "UNDERWEIGHT"
             bmiCategoryOutlet.textColor = UIColor.red
         } else if (Double(bmiResult.text!)! >= 18.5 && Double(bmiResult.text!)! <= 24.9) {
@@ -194,6 +196,10 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
             bmiCategoryOutlet.textColor = UIColor.red
         }
     }
+    
+    @IBAction func saveButton(_ sender: UIBarButtonItem) {
+    }
+    
     
     
     

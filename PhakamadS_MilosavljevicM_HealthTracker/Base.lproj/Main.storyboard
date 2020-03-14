@@ -248,7 +248,7 @@
                                     <action selector="weightInput:" destination="Cia-2q-lB9" eventType="editingDidEndOnExit" id="xgQ-oT-gfd"/>
                                 </connections>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Y0V-dE-Zp7">
+                            <segmentedControl opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Y0V-dE-Zp7">
                                 <rect key="frame" x="218" y="401" width="131" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -374,12 +374,14 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="agePickerOutlet" destination="cqe-fp-MLj" id="Dv5-O1-xw9"/>
                         <outlet property="bmiCategoryOutlet" destination="9Zx-fk-Cdz" id="1Ol-Jk-rbO"/>
                         <outlet property="bmiResult" destination="QYH-wg-he4" id="ax6-ny-cmr"/>
                         <outlet property="feetOutlet" destination="0yp-vI-87q" id="SBv-Td-dUl"/>
                         <outlet property="genderOutlet" destination="Y0V-dE-Zp7" id="vMi-1w-6uW"/>
                         <outlet property="goalWeightOutlet" destination="b0N-Z6-kLa" id="6Na-ng-d8K"/>
                         <outlet property="inchesOutlet" destination="BoB-bS-xxF" id="aoz-nW-crw"/>
+                        <outlet property="nameOutlet" destination="SmT-UW-Nzi" id="5qa-zc-b5I"/>
                         <outlet property="weightOutlet" destination="gqr-Pa-lKq" id="BrW-LE-0Xg"/>
                         <outletCollection property="textFields" destination="SmT-UW-Nzi" collectionClass="NSMutableArray" id="edw-EW-CnV"/>
                         <outletCollection property="textFields" destination="gqr-Pa-lKq" collectionClass="NSMutableArray" id="1DU-FM-XaL"/>

@@ -33,7 +33,53 @@ let ages = ["1", "2", "3", "4", "5",
 
 class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    var user: User?
     
+    @IBOutlet var textFields: [UITextField]!
+    
+    @IBOutlet weak var nameOutlet: UITextField!
+    @IBOutlet weak var genderOutlet: UISegmentedControl!
+    @IBOutlet weak var inchesOutlet: UITextField!
+    @IBOutlet weak var feetOutlet: UITextField!
+    @IBOutlet weak var weightOutlet: UITextField!
+    @IBOutlet weak var agePickerOutlet: UIPickerView!
+    @IBOutlet weak var goalWeightOutlet: UITextField!
+    @IBOutlet weak var bmiResult: UILabel!
+    @IBOutlet weak var bmiCategoryOutlet: UILabel!
+    
+    
+    
+    override func viewDidLoad() {        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+            
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let user = user {
+            nameOutlet.text = user.name
+            
+            if user.gender == .male {
+                genderOutlet.selectedSegmentIndex = 0
+            } else {
+                genderOutlet.selectedSegmentIndex = 1
+            }
+            
+            inchesOutlet.text = String(user.heightInches)
+            feetOutlet.text = String(user.heightFeet)
+            weightOutlet.text = String(user.weight)
+            
+            var indexAge = 0
+            for i in 0..<ages.count  {
+                if Int(ages[i]) == user.age {
+                    indexAge = i
+                }
+            }
+            agePickerOutlet.selectRow(indexAge, inComponent: 0, animated: true)
+            goalWeightOutlet.text = String(user.goalWeight)
+            bmiResult.text = String(user.bmi)
+            self.displayBmiCategory(user.bmi)
+        }
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -46,26 +92,6 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
      func pickerView(_ pickerView: UIPickerView, titleForRow row: Int,
     forComponent component: Int)
     -> String? { return ages[row]
-    }
-    
-    
-    var user: User?
-    
-    @IBOutlet var textFields: [UITextField]!
-    @IBOutlet weak var genderOutlet: UISegmentedControl!
-    @IBOutlet weak var inchesOutlet: UITextField!
-    @IBOutlet weak var feetOutlet: UITextField!
-    
-    @IBOutlet weak var weightOutlet: UITextField!
-    @IBOutlet weak var goalWeightOutlet: UITextField!
-    @IBOutlet weak var bmiResult: UILabel!
-    @IBOutlet weak var bmiCategoryOutlet: UILabel!
-    
-    
-    
-        override func viewDidLoad() {        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-            
     }
     
     
@@ -95,15 +121,19 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     
     @IBAction func genderAction(_ sender: UISegmentedControl) {
-        print(sender.selectedSegmentIndex)
-        switch sender.selectedSegmentIndex {
-        case 0:
-            user?.gender = .male
-        case 1:
-            user?.gender = .female
-            print(user?.gender.rawValue as Any)
-        default:
-            break
+        let pickedSegment = sender.selectedSegmentIndex
+        print(pickedSegment)
+        if let user = user {
+            switch pickedSegment {
+             case 0:
+                 user.gender = .male
+                 print(user.gender.rawValue)
+             case 1:
+                 user.gender = .female
+                 print(user.gender.rawValue)
+             default:
+                 break
+             }
         }
     }
     
@@ -180,24 +210,72 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
             bmiResult.text! = String(format: "%.1f", result)
         }
         
-        if (Double(bmiResult.text!)! == 0) {
-            bmiCategoryOutlet.text = "BMI category"
-        } else if (Double(bmiResult.text!)! <= 18.5 ) {
-            bmiCategoryOutlet.text = "UNDERWEIGHT"
-            bmiCategoryOutlet.textColor = UIColor.red
-        } else if (Double(bmiResult.text!)! >= 18.5 && Double(bmiResult.text!)! <= 24.9) {
-            bmiCategoryOutlet.text = "NORMAL"
-            bmiCategoryOutlet.textColor = UIColor.blue
-        } else if (Double(bmiResult.text!)! >= 25 && Double(bmiResult.text!)! <= 29.9) {
-            bmiCategoryOutlet.text = "OVERWEIGHT"
-            bmiCategoryOutlet.textColor = UIColor.red
-        } else if (Double(bmiResult.text!)! >= 30) {
-            bmiCategoryOutlet.text = "OBESE"
-            bmiCategoryOutlet.textColor = UIColor.red
-        }
+        let bmi = Double(bmiResult.text!)!
+        self.displayBmiCategory(bmi)
+        
+//        if (Double(bmiResult.text!)! == 0) {
+//            bmiCategoryOutlet.text = "BMI category"
+//        } else if (Double(bmiResult.text!)! <= 18.5 ) {
+//            bmiCategoryOutlet.text = "UNDERWEIGHT"
+//            bmiCategoryOutlet.textColor = UIColor.red
+//        } else if (Double(bmiResult.text!)! >= 18.5 && Double(bmiResult.text!)! <= 24.9) {
+//            bmiCategoryOutlet.text = "NORMAL"
+//            bmiCategoryOutlet.textColor = UIColor.blue
+//        } else if (Double(bmiResult.text!)! >= 25 && Double(bmiResult.text!)! <= 29.9) {
+//            bmiCategoryOutlet.text = "OVERWEIGHT"
+//            bmiCategoryOutlet.textColor = UIColor.red
+//        } else if (Double(bmiResult.text!)! >= 30) {
+//            bmiCategoryOutlet.text = "OBESE"
+//            bmiCategoryOutlet.textColor = UIColor.red
+//        }
     }
     
+    // display bmi category ex. "OVERWEIGHT"
+    func displayBmiCategory(_ bmi : Double) {
+        if (bmi == 0) {
+             bmiCategoryOutlet.text = "BMI category"
+         } else if (bmi <= 18.5 ) {
+             bmiCategoryOutlet.text = "UNDERWEIGHT"
+             bmiCategoryOutlet.textColor = UIColor.red
+         } else if (bmi >= 18.5 && bmi <= 24.9) {
+             bmiCategoryOutlet.text = "NORMAL"
+             bmiCategoryOutlet.textColor = UIColor.blue
+         } else if (bmi >= 25 && bmi <= 29.9) {
+             bmiCategoryOutlet.text = "OVERWEIGHT"
+             bmiCategoryOutlet.textColor = UIColor.red
+         } else if (bmi >= 30) {
+             bmiCategoryOutlet.text = "OBESE"
+             bmiCategoryOutlet.textColor = UIColor.red
+         }
+    }
+    
+    // save and send data back to home page
     @IBAction func saveButton(_ sender: UIBarButtonItem) {
+        if let home = presentingViewController as? HomeViewController {
+            if let user = user {
+                user.name = nameOutlet.text!
+                
+                if  genderOutlet.selectedSegmentIndex == 0 {
+                    user.gender = .male
+                } else {
+                    user.gender = .female
+                }
+                
+                user.heightInches = Int(inchesOutlet.text!)!
+                user.heightFeet = Int(feetOutlet.text!)!
+                user.weight = Int(weightOutlet.text!)!
+                print(Int(weightOutlet.text!)!)
+                
+                let indexAge = agePickerOutlet.selectedRow(inComponent: 0)
+                print(ages[indexAge])
+                user.age = Int(ages[indexAge])!
+                user.goalWeight = Int(goalWeightOutlet.text!)!
+                user.bmi = Double(bmiCategoryOutlet.text!)!
+                home.user = user
+            }
+        }
+        dismiss(animated: true, completion: nil)
+        
     }
     
     

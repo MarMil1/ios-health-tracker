@@ -63,12 +63,11 @@ class HomeViewController: UIViewController {
         nameOutlet.text = user.name
         genderOutlet.text = user.gender.rawValue
         ageOutlet.text = String(user.age)
-        heightOutlet.text = "\(String(user.heightInches))\' \(String(user.heightFeet))\""
+        heightOutlet.text = "\(String(user.heightFeet))\' \(String(user.heightInches))\""
         weightOutlet.text = String(user.weight)
         bmiOutlet.text = String(user.bmi)
         goalWeightOutlet.text = String(user.goalWeight)
     }
-    
     
 
 

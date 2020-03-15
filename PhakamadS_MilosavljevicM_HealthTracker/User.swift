@@ -36,4 +36,4 @@ class User {
     }
 }
 
-let defaultUser = User(name: "John Doe", gender: .male, age: 25, heightFeet: 6, heightInches: 1, weight: 190, goalWeight: 200, bmi: 20.1)
+let defaultUser = User(name: "John Doe", gender: .male, age: 25, heightFeet: 6, heightInches: 1, weight: 185, goalWeight: 175, bmi: 24.4)

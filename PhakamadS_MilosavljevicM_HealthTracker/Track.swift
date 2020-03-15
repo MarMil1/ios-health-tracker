@@ -72,6 +72,13 @@ class Exercise {
     var minutes: Int
     var calories: Int
     
+    init() {
+        self.name = ""
+        self.hours = 0
+        self.minutes = 0
+        self.calories = 0
+    }
+    
     init(name: String, hours: Int, minutes: Int, calories: Int) {
         self.name = name
         self.hours = hours

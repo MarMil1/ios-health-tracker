@@ -251,8 +251,10 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     // save and send data back to home page
     @IBAction func saveButton(_ sender: UIBarButtonItem) {
-        if let home = presentingViewController as? HomeViewController {
+        if let home = presentingViewController?.children[0] as? HomeViewController  {
+            
             if let user = user {
+                print("send data back to home")
                 user.name = nameOutlet.text!
                 
                 if  genderOutlet.selectedSegmentIndex == 0 {
@@ -270,19 +272,17 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
                 print(ages[indexAge])
                 user.age = Int(ages[indexAge])!
                 user.goalWeight = Int(goalWeightOutlet.text!)!
-                user.bmi = Double(bmiCategoryOutlet.text!)!
+                user.bmi = Double(bmiResult.text!)!
                 home.user = user
+
             }
+
         }
         dismiss(animated: true, completion: nil)
         
     }
     
-    
-    
-    
-    
-    
+
     /*
     // MARK: - Navigation
 

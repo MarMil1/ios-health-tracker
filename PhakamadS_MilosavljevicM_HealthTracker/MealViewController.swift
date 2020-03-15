@@ -265,7 +265,7 @@ class MealViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.present(alert, animated: true, completion: nil)
     }
     
-    // update main meals list in mealViewController
+    // update main meals list in trackViewController
     func updateMainMealsList() -> Void {
         switch self.topicTitle.text {
             case "Breakfast" :

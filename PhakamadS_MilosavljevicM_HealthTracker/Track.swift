@@ -49,14 +49,33 @@ class Water {
 }
 
 class Exercise {
-    var exercise: String
-    var hours: Int
-    var calories: Int
-    var type = "execise"
     
-    init(exercise: String, hours: Int, calories: Int) {
-        self.exercise = exercise
+    enum `image` : String {
+        case baseball = "baseball.png"
+        case basketball = "baseketball.png"
+        case cycling = "cycling.png"
+        case football = "football.png"
+        case golf = "golf.png"
+        case hiking = "hiking"
+        case running = "running.png"
+        case skiing = "skiing.png"
+        case swimming = "swimming.png"
+        case tennis = "tennis.png"
+        case volleyball = "volleyball.png"
+        case walking = "walking.png"
+        case weightlifting = "eeightlifting.png"
+        case yoga = "yoga.png"
+    }
+    
+    var name: String
+    var hours: Int
+    var minutes: Int
+    var calories: Int
+    
+    init(name: String, hours: Int, minutes: Int, calories: Int) {
+        self.name = name
         self.hours = hours
+        self.minutes = minutes
         self.calories = calories
     }
 }

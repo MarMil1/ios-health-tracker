@@ -68,8 +68,6 @@ class HomeViewController: UIViewController {
         bmiOutlet.text = String(user.bmi)
         goalWeightOutlet.text = String(user.goalWeight)
     }
-    
-
 
 }
 

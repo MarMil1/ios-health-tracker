@@ -19,7 +19,7 @@
                                 <rect key="frame" x="20" y="114" width="374" height="222"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="iET-Ak-wLb">
-                                        <rect key="frame" x="67" y="8" width="240" height="205.00000000000006"/>
+                                        <rect key="frame" x="67" y="8" width="240" height="205"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCc-l4-kLK">
                                         <rect key="frame" x="315" y="160" width="53" height="110"/>
@@ -1072,7 +1072,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windingRoad" translatesAutoresizingMaskIntoConstraints="NO" id="BUA-im-k2q">
-                                        <rect key="frame" x="238" y="82" width="105" height="105.00000000000006"/>
+                                        <rect key="frame" x="238" y="82" width="105" height="105"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.47843829087214551" blue="0.15967355420295504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1147,7 +1147,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="targetImage" translatesAutoresizingMaskIntoConstraints="NO" id="fF7-mk-nQE">
-                                <rect key="frame" x="143" y="590" width="131" height="145.00000000000006"/>
+                                <rect key="frame" x="143" y="590" width="131" height="145"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

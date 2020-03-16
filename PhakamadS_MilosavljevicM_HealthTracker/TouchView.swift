@@ -71,26 +71,15 @@ class TouchView: UIView {
                 if isFull(imageView) {
                     imageView.image = UIImage(named: "water-empty")
                     imageView.restorationIdentifier = "water-empty"
-                    imagesId[i] = "water-empty"
+                    waterImagesId[i] = "water-empty"
                 } else {
                     imageView.image = UIImage(named: "water-full")
                     imageView.restorationIdentifier = "water-full"
-                    imagesId[i] = "water-full"
+                    waterImagesId[i] = "water-full"
                 }
                 
             }
         }
-//
-//        if image1.frame.contains(point) {
-//            if image1.restorationIdentifier == "water-empty" {
-//                print("change image")
-//                image1.image = UIImage(named: "water-full")
-//                image1.restorationIdentifier = "water-full"
-//            } else {
-//                image1.image = UIImage(named: "water-empty")
-//                image1.restorationIdentifier = "water-empty"
-//            }
-//        }
         setNeedsDisplay()
     }
     

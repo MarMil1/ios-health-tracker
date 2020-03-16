@@ -8,8 +8,6 @@
 
 import UIKit
 
-var imagesId = [ "water-empty", "water-empty", "water-empty", "water-empty", "water-empty", "water-empty", "water-empty", "water-empty", "water-empty", "water-empty" ]
-
 class WaterViewController: UIViewController {
     var receivedTopic: [String : String]?
 
@@ -22,8 +20,8 @@ class WaterViewController: UIViewController {
         super.viewDidLoad()
         
         for i in 0..<touchView.imagesCollection.count {
-            touchView.imagesCollection[i].image = UIImage(named: imagesId[i])
-            touchView.imagesCollection[i].restorationIdentifier = imagesId[i]
+            touchView.imagesCollection[i].image = UIImage(named: waterImagesId[i])
+            touchView.imagesCollection[i].restorationIdentifier = waterImagesId[i]
         }
         print("water viewDidLoad")
 

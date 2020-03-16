@@ -16,34 +16,17 @@ let trackTopics = [
     "Exersice"
 ]
 
-let meal1 = Meal(food: "oatmeal", mealType: .breakfast, amount: 1, calories: 300)
-let meal2 = Meal(food: "banana", mealType: .breakfast, amount: 1, calories: 200)
-let meal3 = Meal(food: "Coffee", mealType: .breakfast, amount: 1, calories: 180)
-let meal4 = Meal(food: "chicken sandwich", mealType: .lunch, amount: 1, calories: 520)
-let meal5 = Meal(food: "Steak", mealType: .dinner, amount: 1, calories: 400)
-let meal6 = Meal(food: "tuna salad", mealType: .dinner, amount: 1, calories: 400)
-let exer1 = Exercise(name: "basketball", hours: 1, minutes: 30, calories: 500)
-let exer2 = Exercise(name: "baseball", hours: 99, minutes: 0, calories: 2000)
-let exer3 = Exercise(name: "Cycling", hours: 5, minutes: 45, calories: 1000)
-let exer4 = Exercise(name: "golf", hours: 10, minutes: 20, calories: 3200)
-let exer5 = Exercise(name: "hiking", hours: 8, minutes: 0, calories: 1500)
-let exer6 = Exercise(name: "running", hours: 12, minutes: 20, calories: 680)
-let exer7 = Exercise(name: "skiing", hours: 12, minutes: 20, calories: 680)
-let exer8 = Exercise(name: "swimming", hours: 12, minutes: 20, calories: 680)
-let exer9 = Exercise(name: "tennis", hours: 12, minutes: 20, calories: 680)
-let exer10 = Exercise(name: "volleyball", hours: 12, minutes: 20, calories: 680)
-let exer11 = Exercise(name: "Walking", hours: 12, minutes: 20, calories: 680)
-let exer12 = Exercise(name: "weightlifting", hours: 12, minutes: 20, calories: 680)
-let exer13 = Exercise(name: "football", hours: 12, minutes: 20, calories: 680)
-let exer14 = Exercise(name: "yoga", hours: 12, minutes: 20, calories: 680)
+let meal1 = Meal(food: "Coffee", mealType: .breakfast, amount: 1, calories: 180)
+let meal2 = Meal(food: "chicken sandwich", mealType: .lunch, amount: 1, calories: 720)
+let meal3 = Meal(food: "tuna salad", mealType: .dinner, amount: 1, calories: 550)
+let exer1 = Exercise(name: "swimming", hours: 1, minutes: 30, calories: 600)
+let exer2 = Exercise(name: "tennis", hours: 3, minutes: 0, calories: 1500)
 
-
-// ["Baseball", "Baseketball", "Cycling", "Football", "Golf", "Hiking", "Running", "Skiing", "Swimming", "Tennis", "Volleyball", "Walking", "Weightlifting", "Yoga"]
-
-var breakfastMeals : [Meal]? = [ meal1, meal2, meal3 ]
-var lunchMeals : [Meal]? = [ meal4 ]
-var dinnerMeals : [Meal]? = [ meal5, meal6]
-var exercises : [Exercise]? = [ exer1, exer2, exer3, exer4, exer5, exer6, exer7, exer8, exer9, exer10, exer11, exer12, exer13, exer14]
+var breakfastMeals : [Meal]? = [ meal1 ]
+var lunchMeals : [Meal]? = [ meal2 ]
+var dinnerMeals : [Meal]? = [ meal3 ]
+var exercises : [Exercise]? = [ exer1, exer2 ]
+var waterImagesId = [ "water-empty", "water-empty", "water-empty", "water-empty", "water-empty", "water-empty", "water-empty", "water-empty", "water-empty", "water-empty" ]
 
 class TrackTableViewController: UITableViewController {
 

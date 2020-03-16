@@ -10,6 +10,7 @@
 		560C8CD72418155B00ADDE53 /* WaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560C8CD62418155B00ADDE53 /* WaterViewController.swift */; };
 		561365882418A5A80036436D /* TrackHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561365872418A5A80036436D /* TrackHeaderView.swift */; };
 		5613658A2418AB7C0036436D /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561365892418AB7C0036436D /* ExerciseViewController.swift */; };
+		5685D105241EFE9C00EA2F7D /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5685D104241EFE9C00EA2F7D /* TouchView.swift */; };
 		56B8F57C241AA5C4003E620D /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8F57B241AA5C4003E620D /* MealTableViewCell.swift */; };
 		56B8F57E241D5031003E620D /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8F57D241D5031003E620D /* ExerciseTableViewCell.swift */; };
 		56B8F580241D706A003E620D /* ExerciseChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8F57F241D706A003E620D /* ExerciseChildViewController.swift */; };
@@ -54,6 +55,7 @@
 		560C8CD62418155B00ADDE53 /* WaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterViewController.swift; sourceTree = "<group>"; };
 		561365872418A5A80036436D /* TrackHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHeaderView.swift; sourceTree = "<group>"; };
 		561365892418AB7C0036436D /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		5685D104241EFE9C00EA2F7D /* TouchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchView.swift; sourceTree = "<group>"; };
 		56B8F57B241AA5C4003E620D /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		56B8F57D241D5031003E620D /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		56B8F57F241D706A003E620D /* ExerciseChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseChildViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				AD6115CD240DAB5200B1945F /* AppDelegate.swift */,
 				AD6115CF240DAB5200B1945F /* SceneDelegate.swift */,
 				AD6115D1240DAB5200B1945F /* HomeViewController.swift */,
+				AD24392924189DDC006C7559 /* User.swift */,
 				AD6115FF240DAE2100B1945F /* ProgressViewController.swift */,
 				AD5A1917241A03920067947B /* GraphViewController.swift */,
 				AD611601240DAE7900B1945F /* FeelingsViewController.swift */,
@@ -143,13 +146,13 @@
 				56EA5A35241764FC00BE1112 /* Track.swift */,
 				56EA5A2B24172BEA00BE1112 /* MealViewController.swift */,
 				56B8F57B241AA5C4003E620D /* MealTableViewCell.swift */,
-				561365892418AB7C0036436D /* ExerciseViewController.swift */,
 				AD18896F2416042300896A8D /* SettingsViewController.swift */,
-				AD24392924189DDC006C7559 /* User.swift */,
+				561365892418AB7C0036436D /* ExerciseViewController.swift */,
 				56B8F57F241D706A003E620D /* ExerciseChildViewController.swift */,
 				56B8F581241D74C9003E620D /* ExerciseHeaderView.swift */,
 				56B8F57D241D5031003E620D /* ExerciseTableViewCell.swift */,
 				560C8CD62418155B00ADDE53 /* WaterViewController.swift */,
+				5685D104241EFE9C00EA2F7D /* TouchView.swift */,
 				AD6115D5240DAB5200B1945F /* Main.storyboard */,
 				AD6115D8240DAB5800B1945F /* Assets.xcassets */,
 				AD6115DA240DAB5800B1945F /* LaunchScreen.storyboard */,
@@ -323,6 +326,7 @@
 				56EA5A282415F9ED00BE1112 /* TrackTableViewController.swift in Sources */,
 				56EA5A2C24172BEA00BE1112 /* MealViewController.swift in Sources */,
 				AD6115CE240DAB5200B1945F /* AppDelegate.swift in Sources */,
+				5685D105241EFE9C00EA2F7D /* TouchView.swift in Sources */,
 				5613658A2418AB7C0036436D /* ExerciseViewController.swift in Sources */,
 				AD6115D0240DAB5200B1945F /* SceneDelegate.swift in Sources */,
 				AD1889702416042300896A8D /* SettingsViewController.swift in Sources */,

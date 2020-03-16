@@ -39,15 +39,6 @@ class Meal {
     
 }
 
-class Water {
-    var glass: Int
-    var type = "water"
-    
-    init(glass: Int) {
-        self.glass = glass
-    }
-}
-
 class Exercise {
     
     enum `image` : String {

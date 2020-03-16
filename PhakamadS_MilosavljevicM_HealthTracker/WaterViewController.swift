@@ -14,8 +14,16 @@ class WaterViewController: UIViewController {
     @IBOutlet weak var topicDetail: UILabel!
     @IBOutlet weak var topicTitle: UILabel!
     
+    @IBOutlet weak var touchView: TouchView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for i in 0..<touchView.imagesCollection.count {
+            touchView.imagesCollection[i].image = UIImage(named: waterImagesId[i])
+            touchView.imagesCollection[i].restorationIdentifier = waterImagesId[i]
+        }
+        print("water viewDidLoad")
 
         // Do any additional setup after loading the view.
     }

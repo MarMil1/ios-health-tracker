@@ -122,15 +122,12 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     @IBAction func genderAction(_ sender: UISegmentedControl) {
         let pickedSegment = sender.selectedSegmentIndex
-        print(pickedSegment)
         if let user = user {
             switch pickedSegment {
              case 0:
                  user.gender = .male
-                 print(user.gender.rawValue)
              case 1:
                  user.gender = .female
-                 print(user.gender.rawValue)
              default:
                  break
              }
@@ -199,7 +196,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         } else {
             var result: Double = Double(bmiResult.text!)!
             let weight: Double = Double(weightOutlet.text!)!
-            let feet: Double = Double(feetOutlet.text!)!
+            let feet:   Double = Double(feetOutlet.text!)!
             var height: Double = Double(inchesOutlet.text!)!
             
             // feet to inches formula
@@ -213,21 +210,6 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         let bmi = Double(bmiResult.text!)!
         self.displayBmiCategory(bmi)
         
-//        if (Double(bmiResult.text!)! == 0) {
-//            bmiCategoryOutlet.text = "BMI category"
-//        } else if (Double(bmiResult.text!)! <= 18.5 ) {
-//            bmiCategoryOutlet.text = "UNDERWEIGHT"
-//            bmiCategoryOutlet.textColor = UIColor.red
-//        } else if (Double(bmiResult.text!)! >= 18.5 && Double(bmiResult.text!)! <= 24.9) {
-//            bmiCategoryOutlet.text = "NORMAL"
-//            bmiCategoryOutlet.textColor = UIColor.blue
-//        } else if (Double(bmiResult.text!)! >= 25 && Double(bmiResult.text!)! <= 29.9) {
-//            bmiCategoryOutlet.text = "OVERWEIGHT"
-//            bmiCategoryOutlet.textColor = UIColor.red
-//        } else if (Double(bmiResult.text!)! >= 30) {
-//            bmiCategoryOutlet.text = "OBESE"
-//            bmiCategoryOutlet.textColor = UIColor.red
-//        }
     }
     
     // display bmi category ex. "OVERWEIGHT"
@@ -254,7 +236,6 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         if let home = presentingViewController?.children[0] as? HomeViewController  {
             
             if let user = user {
-                print("send data back to home")
                 user.name = nameOutlet.text!
                 
                 if  genderOutlet.selectedSegmentIndex == 0 {
@@ -266,10 +247,8 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
                 user.heightInches = Int(inchesOutlet.text!)!
                 user.heightFeet = Int(feetOutlet.text!)!
                 user.weight = Int(weightOutlet.text!)!
-                print(Int(weightOutlet.text!)!)
                 
                 let indexAge = agePickerOutlet.selectedRow(inComponent: 0)
-                print(ages[indexAge])
                 user.age = Int(ages[indexAge])!
                 user.goalWeight = Int(goalWeightOutlet.text!)!
                 user.bmi = Double(bmiResult.text!)!

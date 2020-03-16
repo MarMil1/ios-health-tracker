@@ -134,7 +134,6 @@
 				AD6115CD240DAB5200B1945F /* AppDelegate.swift */,
 				AD6115CF240DAB5200B1945F /* SceneDelegate.swift */,
 				AD6115D1240DAB5200B1945F /* HomeViewController.swift */,
-				AD18896F2416042300896A8D /* SettingsViewController.swift */,
 				AD6115FF240DAE2100B1945F /* ProgressViewController.swift */,
 				AD5A1917241A03920067947B /* GraphViewController.swift */,
 				AD611601240DAE7900B1945F /* FeelingsViewController.swift */,

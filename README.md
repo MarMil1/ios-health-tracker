@@ -46,41 +46,41 @@ Lunch screen and dinner screen help users enter their calories of what they had 
 ![ninthView](viewsDemo/Picture9.png) ![tenthView](viewsDemo/Picture10.png)
 
 
-* Screen 7: Water
+* Screen 6: Water
 
 Water screen allows user to track how many glasses of water he/she has drank so far in a day. To fill up a glass, user performs a double tap (single tap won’t do anything in this case) and the color of glass will change. To empty a glass, user would perform the same way (double tap) and color of glass will change back to black and white color.
 
 ![eleventhView](viewsDemo/Picture11.png) ![twelfthView](viewsDemo/Picture12.png)
 
 
-* Screen 8: Exercise
+* Screen 7: Exercise
 
 Exercise screen has the same features as MealViewController (breakfast, lunch, dinner). The only difference is that when a user swipes and selects edit or clicks plus icon, the new page will show up (discuss below).
 
 ![thirteenthView](viewsDemo/Picture13.png)
 
-* Screen 9: Add Exercise
+* Screen 8: Add Exercise
 
 The add/new screen for exercise pops up after user selects add or edit. If user selects edit, exercise detail would pass in here and it will push back after update. Adding will add a new exercise instead of updating. In here, a user allows to type of select exercise from the UIPickerView. User needs to enter number of hours and minutes of exercise in order to calculate calories burned. However, a user is able to manually put calories.  Intensity segment is only for calculation purpose. It helps app to calculate more accurate calories burned. The calculation is based on weight, duration and intensity. 
 
 ![fourteenthView](viewsDemo/Picture14.png)
 
 
-* Screen 10: Progress
+* Screen 9: Progress
 
 The progress page serves as a summary of all the user’s inputs for the day. First, a user can see the navbar with title and UIView with two labels and a button that is replaced with an image of a graph. The graph image is clickable and it will take a user to a GraphViewController or graph view. The graph is not displayed at the moment due to the time constraint of this project. What we planned to do was to use beautiful graphs library which we would install through CocoaPods and display a pie chart or a bar chart of the data represented on the progress page. Below the UIView in progress view, a user can see a summary of activities and quantities of each meal, water and exercise. 
 
 ![fifteenthView](viewsDemo/Picture15.png)
 
 
-* Screen 11: Feelings
+* Screen 10: Feelings
 
 The purpose of this view is to allow users to express their emotions towards their fitness and health progress. The first this a user can see is the navbar with the page title and the UIView with text and image followed by a label with a message for user. In the middle of the screen user can select different emoji icons to express how they feel that day. Once image is selected the label below all of the emojis will change to reflect the feeling. Once emoji is selected, user can drag emoji to the bounding black box below the feelings label and drop it off. Very straightforward and interactive for a user with feelings such as awesome, funky, fine, etc. 
 
 ![sixteenthView](viewsDemo/Picture16.png) ![seventeenthView](viewsDemo/Picture17.png)
 
 
-* Screen 12: Tips
+* Screen 11: Tips
 
 The tips view offers some of the tips a user can follow to achieve best physical performance and health. The first this a user can see is the navbar with the page title and UIView with a label and an image. The tips are displayed from one to ten and arranged one below another. 
 

@@ -14,4 +14,16 @@ The application’s basis for navigation is Navigation Controller with five scre
 * Screen 1: Home/Profile  
 
 This is the home or profile screen which is initial screen of the application. At first, the user can see static user image and green settings button that will take them to Edit Your Profile screen. Right below the image and settings button there is current date displayed and the rest of the user information such as name, gender, age, height, weight, BMI (Body Mass Index), and goal weight. The BMI result will be displayed based on the calculation from Edit Your Profile screen which is using data from height and weight input. The rest of the information is passed from the Edit Your Profile as the user makes and saves changes. 
+
 ![firstView](viewsDemo/Picture1.png)
+
+* Screen 2: Edit Your Profile
+
+The purpose of this view is to help user edit his profile. First element a user can see is the navbar with the page title, UIView that contains BMI result and also which BMI category the user falls into (underweight, normal, overweight or obese). This BMI calculation is available when a user inputs his height and weight and taps “Calculate BMI” button. Based on the result of the calculation the user will see a message of the weight category for that result. Additionally, user can edit his name through a text field, select gender using UISegmentedControl, edit his height and weight, edit his age using UIPickerView, also add or edit his goal weight. Besides that, there are two buttons in the toolbar. Back to home button will display a sheet alert where a user can choose to stay on edit page or leave and go back to home page. Save button will immediately edit the info user has entered and move back to the home page. 
+
+![secondView](viewsDemo/Picture2.png)    ![thirdView](viewsDemo/Picture3.png)
+
+
+
+
+

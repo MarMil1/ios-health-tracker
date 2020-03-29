@@ -1498,7 +1498,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixB-Q0-FWV">
-                                        <rect key="frame" x="247" y="105" width="96" height="96"/>
+                                        <rect key="frame" x="151" y="105" width="192" height="192"/>
                                         <state key="normal" image="add"/>
                                         <connections>
                                             <action selector="addMeal:" destination="j94-o8-zFe" eventType="touchUpInside" id="1yM-C5-n8F"/>

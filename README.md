@@ -9,7 +9,7 @@ This application would serve users who are health and fitness conscious by allow
 Please note that the application’s Auto Layout is working only on iPhone 11 with no auto-layout warnings. However, the application itself runs properly with no errors.
 The application’s basis for navigation is Navigation Controller with five screens such as: Home, Track, Progress, Feelings and Tips. All of the views have UIView for design at the top of each screen with an addition of Quartz 2D drawing API. Every page has a navbar, mainly to display the page title, however the UITableViewControllers we used for tracking activity have back button functionality. 
 
-**Application screens and detail explanation**
+**Application screens and detailed explanation**
 
 * Screen 1: Home/Profile  
 

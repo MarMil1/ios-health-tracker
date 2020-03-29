@@ -19,10 +19,10 @@
                                 <rect key="frame" x="20" y="114" width="374" height="222"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="iET-Ak-wLb">
-                                        <rect key="frame" x="67" y="8" width="240" height="205"/>
+                                        <rect key="frame" x="67" y="8" width="240" height="205.00000000000006"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCc-l4-kLK">
-                                        <rect key="frame" x="315" y="160" width="53" height="110"/>
+                                        <rect key="frame" x="315" y="160" width="53" height="55"/>
                                         <state key="normal" image="settings"/>
                                         <connections>
                                             <segue destination="Cia-2q-lB9" kind="presentation" id="9GY-je-t1k"/>
@@ -1172,7 +1172,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windingRoad" translatesAutoresizingMaskIntoConstraints="NO" id="BUA-im-k2q">
-                                        <rect key="frame" x="238" y="82" width="105" height="105"/>
+                                        <rect key="frame" x="238" y="82" width="105" height="105.00000000000006"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.47843829087214551" blue="0.15967355420295504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1247,7 +1247,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="targetImage" translatesAutoresizingMaskIntoConstraints="NO" id="fF7-mk-nQE">
-                                <rect key="frame" x="143" y="590" width="131" height="145"/>
+                                <rect key="frame" x="143" y="590" width="131" height="145.00000000000006"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1498,7 +1498,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixB-Q0-FWV">
-                                        <rect key="frame" x="247" y="105" width="96" height="96"/>
+                                        <rect key="frame" x="151" y="105" width="192" height="192"/>
                                         <state key="normal" image="add"/>
                                         <connections>
                                             <action selector="addMeal:" destination="j94-o8-zFe" eventType="touchUpInside" id="1yM-C5-n8F"/>
